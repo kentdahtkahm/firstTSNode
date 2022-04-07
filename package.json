@@ -11,5 +11,8 @@
     "url": "git@github.com-kentdahtkahm:kentdahtkahm/firstTSNode.git"
   },
   "author": "Kyle Kent",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.6.3"
+  }
 }
