@@ -39,6 +39,7 @@ export const encode = async(toEncode: string): Promise<string> => {
     let split = toDecode.split(regex);
 
     // pair match, then number, then character
+    // basic implementation, too dependent on perfect input
     for (let i = 1; i < split.length; i = i + 3) {
         // console.log(split[i]);
         decoded = decoded.concat(split[i+1].repeat(Number(split[i])));
