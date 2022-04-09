@@ -27,5 +27,22 @@ export const encode = async(toEncode: string): Promise<string> => {
  };
 
  export const decode = async(toDecode: string): Promise<string> => {
-    return toDecode;
+    //check if toEncode is longer than 0 and not null
+    if (!toDecode) {
+        return "ERROR";
+    }
+
+    // use string concatenation, no string builder class
+    let decoded: string = "";
+
+    const regex = /(\d+)(.)/gi;
+    let split = toDecode.split(regex);
+
+    // pair match, then number, then character
+    for (let i = 1; i < split.length; i = i + 3) {
+        // console.log(split[i]);
+        decoded = decoded.concat(split[i+1].repeat(Number(split[i])));
+    }
+
+    return decoded;
  };
