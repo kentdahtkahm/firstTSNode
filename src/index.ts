@@ -26,7 +26,7 @@ app.use("", RLERouter);
 
 app.get("/", 
     (reg: Request, res: Response): void => {
-        res.send("Hello Typescript with Node.js!!");
+        res.send("Hello Typescript with Node.js!! Hello?");
     }
 );
 

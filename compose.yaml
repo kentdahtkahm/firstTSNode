@@ -1,0 +1,9 @@
+# docker-compose up --build runs in terminal
+# docker-compose up --detach --build runs in background
+
+services:
+  rle:
+    build: .
+    image: rle-docker
+    ports:
+      - "8080:8080"
